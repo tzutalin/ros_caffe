@@ -18,6 +18,12 @@ $ cd $CATKIN_WS
 
 $ catkin_make
 
+You can change your Caffe's include and lib path in CMakeLists.txt(Optional)
+
+set(CAFFE_INCLUDEDIR caffe/include caffe/distribute/include)
+
+set(CAFFE_LINK_LIBRARAY caffe/lib)
+
 ## Run
 $ rosrun ros_caffe ros_caffe_test
 

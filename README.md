@@ -8,7 +8,7 @@ Integrate Caffe model into ROS
 
 * Download the model and install Caffe by following the [Blog](http://tzutalin.blogspot.tw/2015/06/setup-caffe.html) or [Caffe offical site](http://caffe.berkeleyvision.org/installation.html)
 
-### Install
+### Grab the source
 	$ cd $CATKIN_WS/src
 	$ git clone https://github.com/tzutalin/ros_caffe.git
 	

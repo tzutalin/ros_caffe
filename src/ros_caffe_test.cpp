@@ -22,10 +22,10 @@ int main(int argc, char **argv) {
     Caffe::set_mode(Caffe::CPU);
 #endif
 	ros::init(argc, argv, "ros_caffe_main");
-
-	std::string model_path = "/home/darrenl/workspace/eclipse_clusplus_workspace/TestCaffe/bvlc_reference_deploy_memorylayer.prototxt";
-	std::string weights_path = "/home/darrenl/workspace/eclipse_clusplus_workspace/TestCaffe/bvlc_reference_caffenet.caffemodel";
-	std::string image_path = "/home/darrenl/cat.jpg";
+    std::string ROOT_SAMPLE = "/home/darrenl/catkin_ws/src/ros_caffe/";
+	std::string model_path = ROOT_SAMPLE + "bvlc_reference_deploy_memorylayer.prototxt";
+	std::string weights_path = ROOT_SAMPLE + "bvlc_reference_caffenet.caffemodel";
+	std::string image_path = ROOT_SAMPLE + "cat.jpg";
 	// Use CPU only.
 	// Initial
 	Net<float> *caffe_net;

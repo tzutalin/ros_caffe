@@ -1,30 +1,25 @@
 # ros_caffe
 ================
-## Purpose
+### Purpose
 Integrate Caffe model into ROS
 
-## Requirement
-1 Enviornment: Ubuntu 14.04 and catkin Build
+### Requirements
+* Ubuntu and ROS with catkin Build
 
-2 Download the model cafe by yourself
+* Download the model and install Caffe by following the [Blog](http://tzutalin.blogspot.tw/2015/06/setup-caffe.html) or [Caffe offical site](http://caffe.berkeleyvision.org/installation.html)
 
-## Install
-$ cd $CATKIN_WS/src
-
-$ git clone https://github.com/tzutalin/ros_caffe.git
-
+### Install
+	$ cd $CATKIN_WS/src
+	$ git clone https://github.com/tzutalin/ros_caffe.git
+	
 ## Build
-$ cd $CATKIN_WS
-
-$ catkin_make
+	$ cd  $CATKIN_WS
+	$ catkin_make
 
 You can change your Caffe's include and lib path in CMakeLists.txt(Optional)
 
-set(CAFFE_INCLUDEDIR caffe/include caffe/distribute/include)
-
-set(CAFFE_LINK_LIBRARAY caffe/lib)
+	set(CAFFE_INCLUDEDIR caffe/include caffe/distribute/include)
+	set(CAFFE_LINK_LIBRARAY caffe/lib)
 
 ## Run
-$ rosrun ros_caffe ros_caffe_test
-
-
+`$ rosrun ros_caffe ros_caffe_test`

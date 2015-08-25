@@ -1,4 +1,5 @@
-#include "ros/ros.h"
+#include <ros/ros.h>
+#include <ros/package.h>
 #include <iostream>
 #include <caffe/caffe.hpp>
 #include <vector>
@@ -20,12 +21,14 @@ int main(int argc, char **argv) {
 #ifdef CPU_ONLY:
 	std::cout<<"CPU_ONLY" << std::endl;
     Caffe::set_mode(Caffe::CPU);
+#else
+    Caffe::set_mode(Caffe:GPU);
 #endif
-	ros::init(argc, argv, "ros_caffe_main");
-    std::string ROOT_SAMPLE = "/home/darrenl/catkin_ws/src/ros_caffe/";
-	std::string model_path = ROOT_SAMPLE + "bvlc_reference_deploy_memorylayer.prototxt";
-	std::string weights_path = ROOT_SAMPLE + "bvlc_reference_caffenet.caffemodel";
-	std::string image_path = ROOT_SAMPLE + "cat.jpg";
+	ros::init(argc, argv, "ros_caffe_test");
+    const std::string ROOT_SAMPLE = ros::package::getPath("ros_caffe");
+	const std::string model_path = ROOT_SAMPLE + "/data/bvlc_reference_deploy_memorylayer.prototxt";
+	const std::string weights_path = ROOT_SAMPLE + "/data/bvlc_reference_caffenet.caffemodel";
+	const std::string image_path = ROOT_SAMPLE + "/data/cat.jpg";
 	// Use CPU only.
 	// Initial
 	Net<float> *caffe_net;

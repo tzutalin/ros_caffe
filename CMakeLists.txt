@@ -6,7 +6,7 @@ add_definitions(-DCPU_ONLY=1)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  roscpp
+  roscpp roslib
 )
 
 set(CAFFE_INCLUDEDIR caffe/include caffe/distribute/include)

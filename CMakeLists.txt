@@ -10,7 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 set(CAFFE_INCLUDEDIR caffe/include caffe/distribute/include)
-set(CAFFE_LINK_LIBRARAY caffe/lib)
+set(CAFFE_LINK_LIBRARAY caffe/build/lib)
 #set(DISCAFFE_INCLUDEDIR /home/darrenl/developments/caffe/distribute/include)
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)

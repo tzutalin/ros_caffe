@@ -13,11 +13,25 @@ Integrate Caffe model into ROS
 
 `$ git clone https://github.com/tzutalin/ros_caffe.git`
 
-`$ cd $CATKIN_WS/src/data/`
+`$ cd $CATKIN_WS/src/ros_caffe/data/`
 
 `$ sh getCaffeWeight.sh`
 
 ## Build & Run
+* Build Caffe
+
+`cd $CATKIN_WS/src/ros_caffe/`
+
+`cp Makefile.config.example Makefile.config`
+
+`$ vi Makefile.config`
+
+For CPU-only Caffe, uncomment CPU_ONLY := 1 in Makefile.config.
+
+`$ make all ; make distribute`
+
+* Build ros package
+
 `$ cd $CATKIN_WS`
 
 `$ catkin_make`

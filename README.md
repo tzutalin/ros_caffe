@@ -11,7 +11,7 @@ Integrate Caffe model into ROS
 ## Grab the source
 `$ cd $CATKIN_WS/src`
 
-`$ git clone https://github.com/tzutalin/ros_caffe.git`
+`$ git clone --recursive https://github.com/tzutalin/ros_caffe.git`
 
 `$ cd $CATKIN_WS/src/ros_caffe/data/`
 

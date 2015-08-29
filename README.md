@@ -20,7 +20,7 @@ Integrate Caffe model into ROS
 ## Build & Run
 * Build Caffe
 
-`cd $CATKIN_WS/src/ros_caffe/`
+`cd $CATKIN_WS/src/ros_caffe/caffe`
 
 `cp Makefile.config.example Makefile.config`
 

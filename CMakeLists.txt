@@ -6,14 +6,15 @@ add_definitions(-DCPU_ONLY=1)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  roscpp roslib
+  roscpp roslib std_msgs sensor_msgs image_transport cv_bridge
 )
 
 set(CAFFE_INCLUDEDIR caffe/include caffe/distribute/include)
 set(CAFFE_LINK_LIBRARAY caffe/build/lib)
-#set(DISCAFFE_INCLUDEDIR /home/darrenl/developments/caffe/distribute/include)
+
 ## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
+find_package(Boost REQUIRED COMPONENTS system)
+find_package(OpenCV REQUIRED)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -97,6 +98,7 @@ catkin_package(
 # include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
 )
 include_directories(${CAFFE_INCLUDEDIR})
 ## Declare a cpp library
@@ -165,4 +167,4 @@ include_directories(${CAFFE_INCLUDEDIR})
 # catkin_add_nosetests(test)
 link_directories(${CAFFE_LINK_LIBRARAY})
 add_executable(ros_caffe_test src/ros_caffe_test.cpp)
-target_link_libraries(ros_caffe_test ${catkin_LIBRARIES} caffe)
+target_link_libraries(ros_caffe_test ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} caffe glog)

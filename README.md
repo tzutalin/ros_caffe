@@ -45,23 +45,24 @@ Open another terminal, execute
 `$ rosrun ros_caffe ros_caffe_test`
 
 Output:
-Test default image under /data/cat.jpg
-0.1384 - "n02123159 tiger cat"
-0.1302 - "n02123045 tabby, tabby cat"
-0.1138 - "n02085620 Chihuahua"
-0.1076 - "n02094433 Yorkshire terrier"
-0.0914 - "n02123394 Persian cat"
+
+	Test default image under /data/cat.jpg
+	0.1384 - "n02123159 tiger cat"
+	0.1302 - "n02123045 tabby, tabby cat"
+	0.1138 - "n02085620 Chihuahua"
+	0.1076 - "n02094433 Yorkshire terrier"
+	0.0914 - "n02123394 Persian cat"
 
 
 You can echo a topic to receive the string message.
 
 `$ rostopic echo /caffe_ret`
 
-data: [0.138446 - n02123159 tiger cat]
-[0.130182 - n02123045 tabby, tabby cat]
-[0.113755 - n02085620 Chihuahua]
-[0.107584 - n02094433 Yorkshire terrier]
-[0.0913549 - n02123394 Persian cat]
+	data: [0.138446 - n02123159 tiger cat]
+	[0.130182 - n02123045 tabby, tabby cat]
+	[0.113755 - n02085620 Chihuahua]
+	[0.107584 - n02094433 Yorkshire terrier]
+	[0.0913549 - n02123394 Persian cat]
 
 ## Note
 

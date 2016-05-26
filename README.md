@@ -11,16 +11,16 @@ Integrate Caffe model into ROS
 * [Install Caffe dependencies](http://caffe.berkeleyvision.org/installation.html)
 
 ## Grab the source
-`$ cd $CATKIN_WS/src`
+`$ cd [CATKIN_WS]/src`
 
 `$ git clone --recursive https://github.com/tzutalin/ros_caffe.git`
 
-`$ cd $CATKIN_WS/src/ros_caffe`
+`$ cd [CATKIN_WS]/src/ros_caffe`
 
 ## Build
 Build Caffe
 
-`cd $CATKIN_WS/src/ros_caffe/caffe`
+`cd [CATKIN_WS]/src/ros_caffe/caffe`
 
 `cp Makefile.config.example Makefile.config`
 
@@ -32,13 +32,13 @@ For CPU-only Caffe, uncomment CPU_ONLY := 1 in Makefile.config.
 
 Build ros package
 
-`$ cd $CATKIN_WS`
+`$ cd [CATKIN_WS]`
 
 `$ catkin_make`
 
 ## Run
 
-You can get default caffe's network and model by executing
+You can download default caffenet's model. It will be located at data folder
 
 `cd data; sh download_caffe_model.sh`
 
@@ -85,5 +85,5 @@ Receive an image :
 You can change your Caffe's include and lib path in CMakeLists.txt.
 
 	set(CAFFE_INCLUDEDIR caffe/include caffe/distribute/include)
-	set(CAFFE_LINK_LIBRARAY caffe/lib)`
+	set(CAFFE_LINK_LIBRARAY caffe/lib)
 

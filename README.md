@@ -1,12 +1,14 @@
 # ros_caffe
-================
+
 ## Purpose
 Integrate Caffe model into ROS
 
 ## Requirements
-* Ubuntu 
+* Ubuntu
 
 * [Install ROS](http://wiki.ros.org/ROS/Installation) with [catkin build](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment). Create a catkin workspace.
+
+* [Install Caffe dependencies](http://caffe.berkeleyvision.org/installation.html)
 
 ## Grab the source
 `$ cd $CATKIN_WS/src`
@@ -15,10 +17,8 @@ Integrate Caffe model into ROS
 
 `$ cd $CATKIN_WS/src/ros_caffe`
 
-`$ ./get_model.py`
-
-## Build & Run
-* Build Caffe
+## Build
+Build Caffe
 
 `cd $CATKIN_WS/src/ros_caffe/caffe`
 
@@ -30,11 +30,17 @@ For CPU-only Caffe, uncomment CPU_ONLY := 1 in Makefile.config.
 
 `$ make all ; make distribute`
 
-* Build ros package
+Build ros package
 
 `$ cd $CATKIN_WS`
 
 `$ catkin_make`
+
+## Run
+
+You can get default caffe's network and model by executing
+
+`cd data; sh download_caffe_model.sh`
 
 Open a terminal, execute
 
@@ -52,7 +58,6 @@ Output:
 	0.1138 - "n02085620 Chihuahua"
 	0.1076 - "n02094433 Yorkshire terrier"
 	0.0914 - "n02123394 Persian cat"
-
 
 You can echo a topic to receive the string message.
 
@@ -74,13 +79,11 @@ Receive an image :
 
 /camera/rgb/image_raw
 
-## Note
-
+## Optional settting
 * Optional: Download the model and install Caffe by following the [Blog](http://tzutalin.blogspot.tw/2015/06/setup-caffe.html) or [Caffe offical site](http://caffe.berkeleyvision.org/installation.html)
 
-You can change your Caffe's include and lib path in CMakeLists.txt. 
+You can change your Caffe's include and lib path in CMakeLists.txt.
 
-	`set(CAFFE_INCLUDEDIR caffe/include caffe/distribute/include)`
-	
-	`set(CAFFE_LINK_LIBRARAY caffe/lib)`
+	set(CAFFE_INCLUDEDIR caffe/include caffe/distribute/include)
+	set(CAFFE_LINK_LIBRARAY caffe/lib)`
 

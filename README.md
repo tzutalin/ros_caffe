@@ -10,6 +10,8 @@ Integrate Caffe model into ROS
 
 * [Install Caffe dependencies](http://caffe.berkeleyvision.org/installation.html)
 
+* [Install CUDA 6.5 for NVIDIA TK1](https://gist.github.com/jetsonhacks/6da905e0675dcb5cba6f)
+
 ## Grab the source
 `$ cd [CATKIN_WS]/src`
 
@@ -35,6 +37,8 @@ Build ros package
 `$ cd [CATKIN_WS]`
 
 `$ catkin_make`
+
+'$ source ./devel/setup.bash'
 
 ## Run
 

@@ -38,7 +38,7 @@ Build ros package
 
 `$ catkin_make`
 
-'$ source ./devel/setup.bash'
+`$ source ./devel/setup.bash`
 
 ## Run
 
@@ -49,6 +49,12 @@ You can download default caffenet's model. It will be located at data folder
 Open a terminal, execute
 
 `$ roscore`
+
+Open another terminal, execute
+`$ roslaunch turtlebot_bringup 3dsensor.launch`
+
+if you dont have turtlebot, you could use astra's camera:
+`$ roslaunch astra_launch astra.launch`
 
 Open another terminal, execute
 
